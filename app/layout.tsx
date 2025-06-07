@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Inter } from "next/font/google";
+import "../styles/style.css";
 
 // فونت گوگل
 const geistSans = Geist({
@@ -20,7 +22,10 @@ export const metadata: Metadata = {
     description: "A secure and user-friendly cryptocurrency exchange platform",
   },
 };
-
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter", // نام متغیر CSS برای استفاده در کلاس‌ها
+});
 export default function RootLayout({
   children,
 }: {
@@ -29,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body
-        className={`${geistSans.variable} relative bg-black text-white min-h-screen overflow-x-hidden`}
+        className={`${geistSans.variable} ${inter.variable} relative bg-black text-white min-h-screen overflow-x-hidden`}
       >
         {/* پس‌زمینه بلوری دایره‌ای */}
 

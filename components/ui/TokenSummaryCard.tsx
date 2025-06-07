@@ -13,7 +13,7 @@ interface TokenData {
 
 const TokenSummaryCard = (item: TokenData) => {
   return (
-    <div className="flex flex-row-reverse flex-nowrap bg-[#080C23] rounded-[12px] py-[28px] px-[14px] w-[200px] h-[245px]">
+    <div className="flex flex-row-reverse justify-between flex-nowrap bg-[#080C23] rounded-[12px] py-[28px] px-[14px] w-[200px] h-[245px]">
       <div
         className="flex gap-3 flex-col justify-between flex-nowrap"
         style={{ direction: "ltr" }}

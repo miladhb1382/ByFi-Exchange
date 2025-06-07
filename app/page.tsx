@@ -74,7 +74,11 @@ export default function Home() {
           {/* متن و توضیحات */}
           <div className="flex flex-col gap-6  max-w-lg text-right">
             <h2 className="text-3xl font-semibold pr-2 text-[20px] h-[30px] overflow-hidden p-0 m-0 text-white flex items-center gap-2">
-              اپلیکیشن <Logo className="w-[130px]  mr-[-30px]" altText="byfi" />
+              اپلیکیشن{" "}
+              <Logo
+                className="w-[130px] object-cover  mr-[-30px]"
+                altText="byfi"
+              />
             </h2>
 
             <div className=" flex flex-col gap-1 text-right">

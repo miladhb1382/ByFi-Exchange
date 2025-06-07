@@ -15,7 +15,7 @@ const Logo = ({
       alt={altText}
       width={150}
       height={150}
-      className={clsx("object-contain", className)}
+      className={clsx("object-contain mt-[45px]", className)}
     />
   </Link>
 );

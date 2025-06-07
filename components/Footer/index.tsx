@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex justify-between    flex-row-reverse my-2 items-center w-full mx-auto max-w-[1440px]">
               {" "}
               <Logo
-                className="object-cover w-[180px] h-[80px]"
+                className=" w-[180px] h-[80px]"
                 altText="Crypto Exchange Footer Logo"
               />
               <div className="text-[18px] font-[700]">

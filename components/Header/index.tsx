@@ -22,7 +22,7 @@ const Header = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center h-auto md:h-[103px] px-4 py-4 max-w-[1340px]">
         <div className="flex items-center space-x-4">
           <Logo
-            className="object-cover mr-[-37px] min-w-[180px] h-[100px]"
+            className="object-cover mr-[-37px]  min-w-[180px] h-[100px]"
             altText="Crypto Exchange Header Logo"
           />
           <div className="menu-container flex flex-row gap-x-10 ">

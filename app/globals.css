@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
 @theme {
   --color-primary: #101428;
   --color-secondry: #3b6ff8;
@@ -164,6 +165,7 @@ body {
   direction: rtl;
   background-color: #000000;
   overflow-x: none;
+  font-family: "Shabnam", var(--font-inter), sans-serif;
 }
 .background-blur-circle {
   position: absolute;

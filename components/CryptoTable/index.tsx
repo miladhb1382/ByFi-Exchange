@@ -214,7 +214,7 @@ const CryptoTable = () => {
     <Table className="max-w-[1340px] h-[420px] mx-auto">
       <TableHeader className="h-[62px] flex items-center border-b-[1px] mb-4 border-[#3a6ff833]">
         {/* items-center برای وسط‌چین عمودی متن‌ها */}
-        <TableRow className="text-white border-none text-[16px] font-bold leading-[100%] font-[Poppins] grid grid-cols-9  w-full hover:bg-transparent hover:text-inherit">
+        <TableRow className="text-white border-none text-[16px] font-bold leading-[100%]  grid grid-cols-9  w-full hover:bg-transparent hover:text-inherit">
           <TableHead className="col-span-1 text-white flex items-center flex-nowarap justify-center">
             نام ارزدیجیتال
           </TableHead>
@@ -238,7 +238,7 @@ const CryptoTable = () => {
         {cryptoData.map((crypto, index) => (
           <TableRow
             key={index}
-            className="hover:bg-[#10152B] hover:text-white text-white border-none rounded-[15px] h-[71px] text-[14px] font-[Poppins] bg-[#10152B] grid grid-cols-9"
+            className="hover:bg-[#10152B] hover:text-white text-white border-none rounded-[15px] h-[71px] text-[14px]  bg-[#10152B] grid grid-cols-9"
           >
             <TableCell className="col-span-1 h-[71px]">
               <div className="flex items-center gap-2">

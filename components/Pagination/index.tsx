@@ -13,7 +13,7 @@ const PaginationButtons = () => (
       <PaginationItem>
         <PaginationNext href="#" className="pagination-button bg-[#1A2140]">
           <span className="sr-only">بعدی</span>
-          <ChevronLeftIcon className="icon-sm" />
+          <ChevronRightIcon className="icon-sm" />
         </PaginationNext>
       </PaginationItem>
 
@@ -32,7 +32,7 @@ const PaginationButtons = () => (
       <PaginationItem>
         <PaginationPrevious href="#" className="pagination-button bg-[#1A2140]">
           <span className="sr-only ">قبلی</span>
-          <ChevronRightIcon className="icon-sm" />
+          <ChevronLeftIcon className="icon-sm" />
         </PaginationPrevious>
       </PaginationItem>
     </PaginationContent>

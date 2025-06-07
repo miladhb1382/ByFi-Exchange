@@ -54,7 +54,7 @@ const Header = () => {
         <div className="flex items-center space-x-2 mt-4 md:mt-0">
           {/* دکمه ثبت‌نام */}
           <div
-            className="px-[24px] py-[18px] h-[48px] flex justify-center items-center bg-secondry text-white w-[178px] text-center text-[16px] font-[700] rounded-[40px] hover:opacity-75 transition-opacity"
+            className="cursor-pointer px-[24px] py-[18px] h-[48px] flex justify-center items-center bg-secondry text-white w-[178px] text-center text-[16px] font-[700] rounded-[40px] hover:opacity-75 transition-opacity"
             onClick={() => setOpen(true)}
           >
             ثبت‌نام
@@ -62,7 +62,7 @@ const Header = () => {
 
           {/* دکمه ورود */}
           <div
-            className="px-[24px] py-[18px] h-[48px] flex justify-center items-center bg-white w-[178px] text-[16px] text-center font-[700] text-secondry rounded-[40px] hover:opacity-75  transition-opacity"
+            className="cursor-pointer px-[24px] py-[18px] h-[48px] flex justify-center items-center bg-white w-[178px] text-[16px] text-center font-[700] text-secondry rounded-[40px] hover:opacity-75  transition-opacity"
             onClick={() => setOpen(true)}
           >
             ورود

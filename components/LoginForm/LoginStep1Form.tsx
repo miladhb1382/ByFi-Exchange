@@ -53,7 +53,7 @@ const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ setOpen }) => {
   };
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <DialogTitle className="text-[32px] font-bold p-0 text-white w-full text-center">
         ورود به حساب کاربری
       </DialogTitle>

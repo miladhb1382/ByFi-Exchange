@@ -14,7 +14,7 @@ const ToggleSelector: React.FC<ToggleSelectorProps> = ({
 }) => {
   return (
     <div
-      className="w-[400px] h-[49px] p-[2px] flex items-center justify-between rounded-[9px] border border-black"
+      className="w-[300px] h-[49px] p-[2px] flex items-center justify-between rounded-[9px] border border-black"
       style={{ background: "#A7A7B7" }}
     >
       <div

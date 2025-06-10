@@ -74,7 +74,7 @@ const ForgetWithNumberOrEmail: React.FC<ForgetWithNumberOrEmailProps> = ({
   };
 
   return (
-    <div>
+    <div className="w-full">
       <DialogTitle className="ml-auto">
         <AuthIconAndTitle
           title="بازیابی رمز عبور"

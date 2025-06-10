@@ -17,7 +17,7 @@ import MobileGiftCardSlider from "@/components/MobileGiftCardSlider";
 
 export default function Home() {
   return (
-    <div className="container flex flex-col gap-10  px-0 mx-auto md:px-4 pt-6 ">
+    <div className="container flex flex-col gap-10  px-0 mx-auto overflow-x-hidden md:px-4 pt-6 ">
       {/* modal for authication */}
       {/* Header Section */}
       <div className="flex flex-col gap-4 ">

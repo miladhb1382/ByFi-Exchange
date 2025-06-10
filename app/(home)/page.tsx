@@ -1,14 +1,14 @@
 import PaginationButtons from "@/components/Pagination";
 
 import CryptoTable from "@/components/CryptoTable";
-import CategoryFilter from "@/components/CategoryFilter";
-import CurrencyToggle from "@/components/CurrencyToggle";
+import CategoryFilter from "@/app/(home)/components/CategoryFilter";
+import CurrencyToggle from "@/app/(home)/components/CurrencyToggle";
 import IconSet from "@/components/ui/iconSet";
 import Logo from "@/components/ui/Logo";
 import Image from "next/image";
 import { DOWNLOAD_APP_ICONS } from "@/constants/downloadApplication";
 import { Support_Card } from "@/constants/Support";
-import ShortPricesInfo from "@/components/ShortPricesInfo";
+import ShortPricesInfo from "@/app/(home)/components/ShortPricesInfo";
 
 import GiftCardSlider from "@/components/GiftCardSlider";
 import PriceOverviewSection from "@/components/PriceOverviewSection";

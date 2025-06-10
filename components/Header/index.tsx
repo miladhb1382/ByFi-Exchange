@@ -1,24 +1,68 @@
 "use client";
+
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MENU_ITEMS } from "@/constants";
 import Link from "next/link";
 import Logo from "../ui/Logo";
-import AuthModal from "../ui/modal";
+import RegisterManager from "../RegisterForm";
+import LoginManager from "../LoginForm";
+
+import { useDispatch } from "react-redux";
+import { resetAll, setCurrentForm } from "@/store/authSlice";
+
+type ModalType = "login" | "register" | "forgot" | null;
 
 const Header = () => {
   const pathname = usePathname();
+  const dispatch = useDispatch();
+
   const [mounted, setMounted] = useState(false);
-  const [open, setOpen] = useState(false);
+
+  // این state نگهدارنده نوع مدال باز است یا null
+  const [openModal, setOpenModal] = useState<ModalType>(null);
+
   useEffect(() => {
     setMounted(true);
   }, []);
+  useEffect(() => {
+    if (openModal === null) {
+      dispatch(resetAll()); // ریست کردن کامل استیت auth
+    }
+  }, [openModal, dispatch]);
 
   if (!mounted) return null; // جلوگیری از mismatch
 
+  // باز کردن فرم ثبت‌نام
+  const openRegister = () => {
+    dispatch(setCurrentForm("register"));
+    setOpenModal("register");
+  };
+
+  // باز کردن فرم ورود
+  const openLogin = () => {
+    dispatch(setCurrentForm("login"));
+    setOpenModal("login");
+  };
+
   return (
     <nav className="rtl bg-primary text-white ">
-      <AuthModal open={open} setOpen={setOpen} />
+      {/* فقط یکی از مدال‌ها باز است */}
+      <RegisterManager
+        open={openModal === "register"}
+        setOpen={(open) => {
+          if (!open) setOpenModal(null);
+        }}
+        setOpenModal={setOpenModal} // اضافه کنید این prop را
+      />
+      <LoginManager
+        open={openModal === "login"}
+        setOpen={(open) => {
+          if (!open) setOpenModal(null);
+        }}
+        setOpenModal={setOpenModal} // اگر نیاز هست
+      />
+
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center h-auto md:h-[103px] px-4 py-4 max-w-[1340px]">
         <div className="flex items-center space-x-4">
           <Logo
@@ -51,11 +95,12 @@ const Header = () => {
             />
           </div>
         </div>
+
         <div className="flex items-center space-x-2 mt-4 md:mt-0">
           {/* دکمه ثبت‌نام */}
           <div
             className="cursor-pointer px-[24px] py-[18px] h-[48px] flex justify-center items-center bg-secondry text-white w-[178px] text-center text-[16px] font-[700] rounded-[40px] hover:opacity-75 transition-opacity"
-            onClick={() => setOpen(true)}
+            onClick={openRegister}
           >
             ثبت‌نام
           </div>
@@ -63,7 +108,7 @@ const Header = () => {
           {/* دکمه ورود */}
           <div
             className="cursor-pointer px-[24px] py-[18px] h-[48px] flex justify-center items-center bg-white w-[178px] text-[16px] text-center font-[700] text-secondry rounded-[40px] hover:opacity-75  transition-opacity"
-            onClick={() => setOpen(true)}
+            onClick={openLogin}
           >
             ورود
           </div>
@@ -72,4 +117,5 @@ const Header = () => {
     </nav>
   );
 };
+
 export default Header;

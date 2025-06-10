@@ -5,14 +5,17 @@ const IconSet = ({
   height = 20,
   iconAddress = "",
   className,
+  onClick,
 }: {
   width?: number;
   height?: number;
   iconAddress?: string;
   className?: string;
+  onClick?: () => void;
 }) => {
   return (
     <div
+      onClick={onClick}
       className={clsx("bg-no-repeat bg-contain", className)}
       style={{
         backgroundImage: `url('${iconAddress}')`,

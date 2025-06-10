@@ -5,11 +5,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
 import "../styles/style.css";
+import { ReduxProvider } from "@/components/ReduxProvider";
 
 // فونت گوگل
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 // متادیتا برای SEO
@@ -22,10 +27,7 @@ export const metadata: Metadata = {
     description: "A secure and user-friendly cryptocurrency exchange platform",
   },
 };
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter", // نام متغیر CSS برای استفاده در کلاس‌ها
-});
+
 export default function RootLayout({
   children,
 }: {
@@ -36,17 +38,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${inter.variable} relative bg-black text-white min-h-screen overflow-x-hidden`}
       >
-        {/* پس‌زمینه بلوری دایره‌ای */}
+        <ReduxProvider>
+          {/* پس‌زمینه بلوری دایره‌ای */}
+          <div className="background-blur-circle background-blur-bottom-left" />
+          <div className="background-blur-circle background-blur-bottom-right" />
 
-        <div className="background-blur-circle background-blur-bottom-left" />
-        <div className="background-blur-circle background-blur-bottom-right" />
-
-        <Header />
-        <main className="relative z-10 container max-w-[1440px] mx-auto px-4">
-          {children}
-        </main>
-        <Footer />
-        <div className="flex background-blur-circle background-blur-top-right" />
+          <Header />
+          <main className="relative z-10 container max-w-[1440px] mx-auto px-4">
+            {children}
+          </main>
+          <Footer />
+          <div className="flex background-blur-circle background-blur-top-right" />
+        </ReduxProvider>
       </body>
     </html>
   );

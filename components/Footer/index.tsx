@@ -14,7 +14,7 @@ const Footer = () => {
                 className=" w-[180px] h-[80px]"
                 altText="Crypto Exchange Footer Logo"
               />
-              <div className="text-[18px] font-[700]">
+              <div className="text-[14px] sm:mr-[24px] sm:text-[18px] font-[700]">
                 Boost Your Future Investment
               </div>
               <div className="flex space-x-4 w-[150px] " dir="ltr">

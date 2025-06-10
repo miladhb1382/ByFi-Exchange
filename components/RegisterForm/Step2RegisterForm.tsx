@@ -14,15 +14,13 @@ import { setCurrentForm } from "@/store/authSlice";
 import { useDispatch } from "react-redux";
 
 interface Step2RegisterFormProps {
-  open: boolean;
   setOpen: (open: boolean) => void;
   onNext: () => void;
-  onPrev: () => void;
+
   setOpenModal: (modal: "login" | "register" | "forgot" | null) => void;
 }
 
 const Step2RegisterForm: React.FC<Step2RegisterFormProps> = ({
-  open,
   setOpen,
   setOpenModal,
   onNext,
@@ -123,7 +121,7 @@ const Step2RegisterForm: React.FC<Step2RegisterFormProps> = ({
               <button
                 type="submit"
                 disabled={!isValid || isSubmitting}
-                className={`flex-center w-[404px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
+                className={`flex-center w-[300px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
                   !isValid || isSubmitting
                     ? "opacity-50 cursor-not-allowed"
                     : ""

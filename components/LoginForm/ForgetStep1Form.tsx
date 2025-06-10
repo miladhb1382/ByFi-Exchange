@@ -11,10 +11,7 @@ import ToggleSelector from "../ToggleSelector";
 import { useState } from "react";
 
 interface ForgetWithNumberOrEmailProps {
-  open: boolean;
-  setOpen: (open: boolean) => void;
   onNext: () => void;
-  setOpenModal: (modal: "login" | "register" | "forgot" | null) => void;
 }
 
 const ForgetWithNumberOrEmail: React.FC<ForgetWithNumberOrEmailProps> = ({
@@ -129,7 +126,7 @@ const ForgetWithNumberOrEmail: React.FC<ForgetWithNumberOrEmailProps> = ({
               <button
                 type="submit"
                 disabled={!isValid || isSubmitting}
-                className={`flex-center w-[404px] h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] transition ${
+                className={`flex-center w-[300px] h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] transition ${
                   !isValid || isSubmitting
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:opacity-90 cursor-pointer"

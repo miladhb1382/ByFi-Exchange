@@ -28,7 +28,7 @@ export default function GiftCardSlider() {
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="w-full h-full flex-row-reverse justify-center rounded-xl flex overflow-hidden text-white px-20"
+              className="w-full h-full flex-row-reverse justify-center rounded-xl flex overflow-hidden text-white px-2 lg:px-20"
               style={{
                 background:
                   "linear-gradient(90deg, #705A85 7.37%, #1A151F 100%)",
@@ -41,23 +41,23 @@ export default function GiftCardSlider() {
                   width={700}
                   height={391}
                   alt="gift card"
-                  className="object-cover scale-[1.5] h-full pointer-events-none"
+                  className="object-contain md:object-cover scale-[1.5] h-full pointer-events-none"
                 />
               </div>
 
               {/* سمت راست: متن و دکمه */}
-              <div className="w-1/2 h-full flex flex-col justify-center gap-4 px-4 text-center">
-                <h2 className="font-bold leading-tight text-[24px]">
+              <div className="w-1/2  flex flex-col h-full justify-center gap-2 sm:gap-4 px-4 text-center">
+                <h2 className="font-bold leading-tight text-[10px] sm:text-[14px]  md:text-[20px] lg:text-[24px]">
                   خرید انواع گیفت کارت، سریع، مطمئن و به صرفه!
                 </h2>
-                <p className="text-[15px] font-bold">
+                <p className="text-[8px] sm:text-[10px] md:text-[10px] lg:text-[15px] font-bold">
                   گیفت کارت های سرگرمی و استریم
                 </p>
-                <p className="text-[20px] font-bold">
+                <p className="text-[10px] sm:text-[12px] md:text[14px] lg:text-[20px] font-bold">
                   خرید کارت اعتباری ویزا کارت و مستر کارت
                 </p>
                 <div
-                  className="mt-3 hover:opacity-75 transition-opacity px-5 py-3 w-[335px] mx-auto cursor-pointer text-white font-bold text-[16px] text-center rounded-[8px] transition"
+                  className="mt-3 hover:opacity-75 transition-opacity px-5 py-3 md:w[200px] lg:w-[335px] mx-auto cursor-pointer text-white font-bold text-[8px] sm:text-[10px] md:text-[12px] lg:text-[16px] text-center rounded-[8px] "
                   style={{
                     background:
                       "radial-gradient(123.95% 319.27% at -29.81% -33.02%, #AB71F4 0%, #A56CEC 4.66%, #290951 13.14%, #613697 78.53%, #A56CED 83.94%, #290A51 95.83%)",

@@ -14,8 +14,6 @@ import { useState } from "react";
 interface ForgetStep2FormProps {
   open: boolean;
   setOpen: (open: boolean) => void;
-  onNext: () => void;
-  setOpenModal: (modal: "login" | "register" | "forgot" | null) => void;
 }
 
 const ForgetStep2Form: React.FC<ForgetStep2FormProps> = ({ open, setOpen }) => {
@@ -68,7 +66,7 @@ const ForgetStep2Form: React.FC<ForgetStep2FormProps> = ({ open, setOpen }) => {
         onSubmit={handleSubmit}
       >
         {({ errors, touched, isValid, isSubmitting }) => (
-          <Form className="flex flex-col gap-6 mx-auto w-full justify-between mb-[100px]">
+          <Form className="flex flex-col gap-4 sm:gap-6 mx-auto w-full justify-between mb-[100px]">
             <div className="flex flex-col gap-2 w-full">
               <span className="text-[16px] font-bold text-white">
                 کد شش رقمی ارسال شده را وارد کنید.
@@ -110,7 +108,7 @@ const ForgetStep2Form: React.FC<ForgetStep2FormProps> = ({ open, setOpen }) => {
               <button
                 type="submit"
                 disabled={!isValid || isSubmitting}
-                className={`flex-center w-[404px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
+                className={`flex-center w-[300px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
                   !isValid || isSubmitting
                     ? "opacity-50 cursor-not-allowed"
                     : ""

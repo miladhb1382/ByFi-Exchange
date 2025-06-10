@@ -64,7 +64,10 @@ const PriceOverviewSection = () => {
     },
   ];
   return (
-    <div className="h-[297px] flex items-center gap-[12px] overflow-x-auto rounded-md shadow-md mx-14 pr-8 scrollbar-hide">
+    <div
+      style={{ scrollbarWidth: "none" }}
+      className="md:h-[297px] flex items-center gap-[12px] overflow-x-auto rounded-md shadow-md mx-2 md:mx-14 sm:pr-8 scrollbar-hide"
+    >
       {currentPrices.map((item, i) => (
         <TokenSummaryCard key={i} {...item} />
       ))}

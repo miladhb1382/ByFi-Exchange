@@ -15,14 +15,10 @@ import { useDispatch } from "react-redux";
 import { setCurrentForm } from "@/store/authSlice";
 
 interface LoginStep1FormProps {
-  open: boolean;
   setOpen: (open: boolean) => void;
-  onNext: () => void;
-  onPrev?: () => void;
-  setOpenModal: (modal: "login" | "register" | "forgot" | null) => void;
 }
 
-const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ onNext }) => {
+const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ setOpen }) => {
   const [captchaValid, setCaptchaValid] = useState(false);
   const dispatch = useDispatch();
   const initialValues = {
@@ -53,12 +49,12 @@ const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ onNext }) => {
 
   const handleSubmit = (values: typeof initialValues) => {
     console.log("Form values:", values);
-    onNext();
+    setOpen(false);
   };
 
   return (
-    <div>
-      <DialogTitle className="text-[32px] font-bold p-0 text-white text-center">
+    <div className="w-full ">
+      <DialogTitle className="text-[32px] font-bold p-0 text-white w-full text-center">
         ورود به حساب کاربری
       </DialogTitle>
 
@@ -128,7 +124,7 @@ const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ onNext }) => {
               <button
                 type="submit"
                 disabled={!isValid || isSubmitting}
-                className={`flex-center w-[404px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
+                className={`flex-center w-[300px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
                   !isValid || isSubmitting
                     ? "opacity-50 cursor-not-allowed"
                     : ""

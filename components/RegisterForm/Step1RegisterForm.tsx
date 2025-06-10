@@ -8,7 +8,6 @@ import IconSet from "../ui/iconSet";
 import { useDispatch } from "react-redux";
 
 interface Step1RegisterFormProps {
-  open: boolean;
   setOpen: (open: boolean) => void;
   onNext: () => void;
   setOpenModal: (modal: "login" | "register" | "forgot" | null) => void;
@@ -28,19 +27,30 @@ const Step1RegisterForm: React.FC<Step1RegisterFormProps> = ({
   };
 
   return (
-    <div>
-      <DialogTitle className="flex-center w-full font-bold text-[20px] text-[#A7A7B7]">
+    <div className="flex-center flex-col">
+      <div className="flex sm:hidden ">
+        {" "}
+        <AuthIconAndTitle
+          title=""
+          showIcon={true}
+          iconAddress="/images/useradd.png"
+          className="text-[32px] font-bold   jsutify-center flex items-center gap-2"
+        />
+      </div>
+      <DialogTitle className=" flex-center  w-full font-bold text-[13px] sm:text-[20px] mb-[20px] text-[#2F66F6]  sm:text-[#A7A7B7]">
         سرمایه‌گذاری در ارز دیجیتال را از امروز شروع کنید.
       </DialogTitle>
+      <div className="hidden   sm:flex ">
+        {" "}
+        <AuthIconAndTitle
+          title="ثبت نام در ByFi"
+          showIcon={true}
+          iconAddress="/images/useradd.png"
+          className="text-[32px] font-bold  gap-1 flex-col jsutify-center flex sm:items-center sm:gap-2"
+        />
+      </div>
 
-      <AuthIconAndTitle
-        title="ثبت نام در ByFi"
-        showIcon={true}
-        iconAddress="/images/useradd.png"
-        className="text-[32px] font-bold"
-      />
-
-      <div className="flex flex-col gap-4 mx-auto w-[343px]">
+      <div className="flex flex-col gap-4 mx-auto mt-[20px] w-[343px]">
         <div
           onClick={onNext}
           className="w-full flex-center h-[48px] cursor-pointer bg-[#D9D9D9] text-black font-semibold py-2 rounded-lg hover:opacity-90 transition"

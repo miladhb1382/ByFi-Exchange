@@ -15,7 +15,7 @@ const AuthIconAndTitle: React.FC<AuthIconAndTitleProps> = ({
   className,
 }) => {
   return (
-    <div className={clsx("flex items-center mx-auto gap-2 ", className)}>
+    <div className={clsx("flex items-center gap-2 mx-auto  ", className)}>
       {showIcon && iconAddress && (
         <IconSet iconAddress={iconAddress} width={110} height={110} />
       )}

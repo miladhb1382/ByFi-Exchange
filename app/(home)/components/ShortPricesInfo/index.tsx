@@ -38,14 +38,17 @@ const ShortPricesInfo = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-between w-full h-[55px] pl-10 pr-12">
+    <div
+      style={{ scrollbarWidth: "none" }}
+      className="flex items-center overflow-scroll  justify-center gap-8 w-[1280px] h-[55px] pl-10 pr-12 "
+    >
       {prices.map((item, i) => (
         <div
           key={i}
-          className="text-white flex-nowrap text-lg flex flex-center gap-1 "
-          style={{ direction: "ltr" }}
+          className="text-white flex-nowrap  text-lg flex flex-center gap-1 "
+          style={{ direction: "rtl" }}
         >
-          <span className="text-[14px] text-[#FFFFFFE5]">
+          <span className="text-[14px] text-nowrap text-[#FFFFFFE5]">
             {item.name}/{item.underPrice}
           </span>
           <span className="text-[14px] text-[#31C451]">{item.priceValue}</span>

@@ -243,11 +243,11 @@ body {
 }
 
 .filter-section {
-  @apply flex px-5 justify-between items-center  mt-4;
+  @apply px-5 justify-between items-center  mt-4;
 }
 
 .category-filters {
-  @apply flex gap-2;
+  @apply gap-2;
 }
 
 .category-filter {

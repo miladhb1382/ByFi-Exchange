@@ -1,4 +1,4 @@
-import { nextStep, prevStep, setCurrentForm } from "@/store/authSlice";
+import { nextStep, setCurrentForm } from "@/store/authSlice";
 import Step1RegisterForm from "./Step1RegisterForm";
 import Step2RegisterForm from "./Step2RegisterForm";
 import Step3RegisterForm from "./Step3RegisterForm";
@@ -29,7 +29,6 @@ const RegisterManager: React.FC<RegisterManagerProps> = ({
   };
 
   const handleNext = () => dispatch(nextStep());
-  const handlePrev = () => dispatch(prevStep());
 
   if (!open || currentForm !== "register") return null;
 
@@ -37,7 +36,6 @@ const RegisterManager: React.FC<RegisterManagerProps> = ({
     <AuthModal open={open} setOpen={setOpen}>
       {step === 1 && (
         <Step1RegisterForm
-          open={open}
           setOpen={handleClose}
           onNext={handleNext}
           setOpenModal={setOpenModal}
@@ -45,10 +43,8 @@ const RegisterManager: React.FC<RegisterManagerProps> = ({
       )}
       {step === 2 && (
         <Step2RegisterForm
-          open={open}
           setOpen={handleClose}
           onNext={handleNext}
-          onPrev={handlePrev}
           setOpenModal={setOpenModal}
         />
       )}

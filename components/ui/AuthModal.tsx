@@ -25,12 +25,12 @@ const AuthModal: FC<GenericModalProps> = ({
       <DialogOverlay className="bg-[#D9D9D9] opacity-[0.79] " />
       <DialogContent
         className={clsx(
-          "bg-[#0A0E27] border-none   text-white w-[745px]  h-[852px]  rounded-[16px] ",
+          "bg-[#0A0E27] border-none  text-white w-full  h-full  sm:w-[745px]  sm:h-[852px]  rounded-[16px] ",
           className
         )}
         style={{ maxWidth: 752 }}
       >
-        <div className=" max-w-[404px] flex-center flex-col   space-y-5 mx-auto">
+        <div className=" max-w-[300px] sm:max-w-[404px] flex-center flex-col   space-y-5 mx-auto">
           {children}
         </div>
       </DialogContent>

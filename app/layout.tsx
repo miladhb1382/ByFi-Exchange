@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import MobileMenu from "@/components/MobileMenu";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
 import "../styles/style.css";
@@ -40,15 +41,16 @@ export default function RootLayout({
       >
         <ReduxProvider>
           {/* پس‌زمینه بلوری دایره‌ای */}
-          <div className="background-blur-circle background-blur-bottom-left" />
-          <div className="background-blur-circle background-blur-bottom-right" />
+          <div className="hidden sm:background-blur-circle background-blur-bottom-left" />
+          <div className="hidden sm:background-blur-circle background-blur-bottom-right" />
 
           <Header />
-          <main className="relative z-10 container max-w-[1440px] mx-auto px-4">
+          <main className="relative z-10 container max-w-[1440px] mx-auto px-0 md:px-4">
             {children}
           </main>
+          <MobileMenu />
           <Footer />
-          <div className="flex background-blur-circle background-blur-top-right" />
+          <div className="hidden sm:flex background-blur-circle background-blur-top-right" />
         </ReduxProvider>
       </body>
     </html>

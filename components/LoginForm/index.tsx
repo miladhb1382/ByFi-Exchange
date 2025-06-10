@@ -9,14 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 interface LoginManagerProps {
   open: boolean;
   setOpen: (open: boolean) => void;
-  setOpenModal: (modal: "login" | "register" | "forgot" | null) => void;
 }
 
-const LoginManager: React.FC<LoginManagerProps> = ({
-  open,
-  setOpen,
-  setOpenModal,
-}) => {
+const LoginManager: React.FC<LoginManagerProps> = ({ open, setOpen }) => {
   const dispatch = useDispatch();
   const { currentForm, formSteps } = useSelector(
     (state: RootState) => state.auth
@@ -38,30 +33,15 @@ const LoginManager: React.FC<LoginManagerProps> = ({
   return (
     <AuthModal open={open} setOpen={setOpen}>
       {currentForm === "login" && step === 1 && (
-        <LoginStep1Form
-          open={open}
-          setOpen={handleClose}
-          onNext={handleNext}
-          setOpenModal={setOpenModal}
-        />
+        <LoginStep1Form setOpen={handleClose} />
       )}
 
       {currentForm === "forgot" && step === 1 && (
-        <ForgetWithNumberOrEmail
-          open={open}
-          setOpen={handleClose}
-          onNext={handleNext}
-          setOpenModal={setOpenModal}
-        />
+        <ForgetWithNumberOrEmail onNext={handleNext} />
       )}
 
       {currentForm === "forgot" && step === 2 && (
-        <ForgetStep2Form
-          open={open}
-          setOpen={handleClose}
-          onNext={handleNext}
-          setOpenModal={setOpenModal}
-        />
+        <ForgetStep2Form open={open} setOpen={handleClose} />
       )}
     </AuthModal>
   );

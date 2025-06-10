@@ -85,7 +85,7 @@ const Step3RegisterForm: React.FC<Step3RegisterFormProps> = ({
       >
         {({ isValid, isSubmitting }) => (
           <Form className="flex flex-col gap-6 mx-auto w-full">
-            <p className="flex flex-col gap-4 mx-auto text-center w-full text-bold text-md text-nowrap">
+            <p className="flex flex-col gap-4 mx-auto text-center w-full text-bold text-[12px] sm:text-md text-nowrap">
               کد شش رقمی پیامک شده به شماره 0912345678 را وارد کنید.
             </p>
 
@@ -116,7 +116,7 @@ const Step3RegisterForm: React.FC<Step3RegisterFormProps> = ({
                   ارسال مجدد کد
                 </button>
               ) : (
-                <span className="text-[14px] font-semibold text-gray-500">
+                <span className="sm:text-[14px] font-semibold text-gray-500">
                   امکان ارسال مجدد پس از پایان تایمر
                 </span>
               )}
@@ -126,7 +126,7 @@ const Step3RegisterForm: React.FC<Step3RegisterFormProps> = ({
               <button
                 type="submit"
                 disabled={!isValid || isSubmitting}
-                className={`flex-center w-[404px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
+                className={`flex-center w-[300px] cursor-pointer disabled:cursor-not-allowed h-[48px] bg-[#2F66F6] text-white font-bold py-2 rounded-[12px] disabled:opacity-50 hover:opacity-90 transition ${
                   !isValid || isSubmitting
                     ? "opacity-50 cursor-not-allowed"
                     : ""

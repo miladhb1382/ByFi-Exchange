@@ -266,7 +266,7 @@ const CryptoTable = () => {
             </TableCell>
 
             {/* ستون قیمت فعلی - در موبایل سمت راست راست */}
-            <TableCell className="col-span-1 flex  flex-col justify-center items-start   items-center font-readex text-base text-white font-medium order-1 xl:order-4 pr-4">
+            <TableCell className="col-span-1 flex  flex-col justify-center items-start   font-readex text-base text-white font-medium order-1 xl:order-4 pr-4">
               <div className="text-[14px] lg:text-base">
                 {formatToDollar({ amount: crypto.currentPrice })}
               </div>

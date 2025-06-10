@@ -53,7 +53,7 @@ const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ setOpen }) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full mb-[100px]">
       <DialogTitle className="text-[32px] font-bold p-0 text-white w-full text-center">
         ورود به حساب کاربری
       </DialogTitle>
@@ -64,7 +64,7 @@ const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ setOpen }) => {
         onSubmit={handleSubmit}
       >
         {({ errors, touched, isValid, isSubmitting }) => (
-          <Form className="flex flex-col gap-6 mx-auto w-full">
+          <Form className="flex  sm:h-auto flex-col gap-6 mx-auto w-full">
             <InputWithLabel
               id="phoneNumber"
               name="phoneNumber"

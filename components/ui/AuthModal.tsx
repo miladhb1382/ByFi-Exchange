@@ -25,7 +25,7 @@ const AuthModal: FC<GenericModalProps> = ({
       <DialogOverlay className="bg-[#D9D9D9] opacity-[0.79] " />
       <DialogContent
         className={clsx(
-          "bg-[#0A0E27] border-none  text-white w-full  h-full  sm:w-[745px]  sm:h-[852px]  rounded-[16px] ",
+          "bg-[#0A0E27] border-none overflow-y-scroll text-white w-full  h-full  sm:w-[745px]  sm:h-[852px]  rounded-[16px] ",
           className
         )}
         style={{ maxWidth: 752 }}

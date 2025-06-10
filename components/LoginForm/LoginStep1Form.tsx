@@ -64,7 +64,7 @@ const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ setOpen }) => {
         onSubmit={handleSubmit}
       >
         {({ errors, touched, isValid, isSubmitting }) => (
-          <Form className="flex  sm:h-auto flex-col gap-6 mx-auto w-full">
+          <Form className="flex  sm:h-auto flex-col gap-4 mx-auto w-full">
             <InputWithLabel
               id="phoneNumber"
               name="phoneNumber"
@@ -93,7 +93,7 @@ const LoginStep1Form: React.FC<LoginStep1FormProps> = ({ setOpen }) => {
               )}
             </div>
 
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col w-full">
               <span className="flex justify-between w-full">
                 <span>کد دو عاملی (2FA)</span>
                 <span className="text-center text-[14px] font-semibold">
